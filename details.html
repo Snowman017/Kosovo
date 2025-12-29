@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  <title>Tracking Details</title>
+</head>
+<body>
+    <nav>
+        <div class="nav__header">
+          <div class="nav__logo">
+            <a href="#" class="logo">Kosovo Transit Group</a>
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+      </nav>
+    <header id="home">
+        
+        <div class="header__container">
+          <div class="header__content">
+            <h2>Tracking Details</h2>
+            <p id="details"></p>
+          </div>
+          <div class="header__image">
+            <img src="assets/header.png" alt="header" />
+          </div>
+        </div>
+      </header>
+
+  <script>
+    const trackingData = {
+      "KTG67842900": {
+        name: "Rachel Kite",
+        content: "Personal gifts",
+        status: "In Transit",
+        destination: "4214 E Palm St Meridan, ID 83646, USA"
+      },
+      "TRK987654": {
+        name: "Jane Smith",
+        content: "Personal gift",
+        status: "Delivered",
+        destination: "Abuja, Nigeria"
+      }
+    };
+
+    const trackingNumber = localStorage.getItem("trackingNumber");
+
+    if (trackingData[trackingNumber]) {
+      const order = trackingData[trackingNumber];
+      document.getElementById("details").innerHTML = `
+        <strong>Tracking Number:</strong> ${trackingNumber}<br>
+        <strong>Name:</strong> ${order.name}<br>
+        <strong>Content:</strong> ${order.content}<br>
+        <strong>Status:</strong> ${order.status}<br>
+        <strong>Destination:</strong> ${order.destination}
+      `;
+    }
+  </script>
+
+</body>
+</html>
