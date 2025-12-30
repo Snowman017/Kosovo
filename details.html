@@ -52,7 +52,6 @@
         destination: "Abuja, Nigeria",
         delivery: "10-15 business days"
       }
-      }
     };
 
     const trackingNumber = localStorage.getItem("trackingNumber");
@@ -63,6 +62,7 @@
         <strong>Tracking Number:</strong> ${trackingNumber}<br>
         <strong>Name:</strong> ${order.name}<br>
         <strong>Content:</strong> ${order.content}<br>
+        <strong>Status:</strong> ${order.status}<br>
         <strong>Destination:</strong> ${order.destination}<br>
         <strong>Delivery:</strong> ${ order.delivery}
       `;
