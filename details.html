@@ -42,13 +42,16 @@
         name: "Rachel Kite",
         content: "Personal gifts",
         status: "In Transit",
-        destination: "4214 E Palm St Meridan, ID 83646, USA"
+        destination: "4214 E Palm St Meridan, ID 83646, USA",
+        delivery: "10-15 business days"
       },
       "TRK987654": {
         name: "Jane Smith",
         content: "Personal gift",
         status: "Delivered",
-        destination: "Abuja, Nigeria"
+        destination: "Abuja, Nigeria",
+        delivery: "10-15 business days"
+      }
       }
     };
 
@@ -60,8 +63,8 @@
         <strong>Tracking Number:</strong> ${trackingNumber}<br>
         <strong>Name:</strong> ${order.name}<br>
         <strong>Content:</strong> ${order.content}<br>
-        <strong>Status:</strong> ${order.status}<br>
-        <strong>Destination:</strong> ${order.destination}
+        <strong>Destination:</strong> ${order.destination}<br>
+        <strong>Delivery:</strong> ${ order.delivery}
       `;
     }
   </script>
